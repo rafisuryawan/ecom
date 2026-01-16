@@ -1,0 +1,169 @@
+/* Container Utama */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Kartu Produk */
+.product-card {
+  text-align: center;
+}
+
+/* Box Background Kaos */
+.product-image {
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: translateY(-5px);
+}
+
+/* Variasi Warna */
+.green { background-color: #2d3e2d; }
+.cyan  { background-color: #00bcd4; }
+.dark  { background-color: #1a1a1a; }
+
+/* Garis Tipis */
+.divider {
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  margin: 15px 0;
+}
+
+/* Typography */
+.product-title {
+  font-size: 14px;
+  font-weight: 900; /* Extra Bold */
+  color: #333;
+  margin: 0 0 5px 0;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.product-status {
+  font-size: 13px;
+  font-style: italic;
+  font-family: 'Times New Roman', serif;
+  color: #888;
+  margin: 0;
+}
+
+/* Placeholder icon saja */
+.placeholder-content {
+  font-size: 80px;
+  opacity: 0.8;
+}
+
+/* ============================================= */
+
+/* Styling Halaman Detail */
+.detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.detail-layout {
+  display: flex;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.preview-section {
+  flex: 1;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-section {
+  flex: 1;
+}
+
+.option-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.step-num {
+  font-size: 12px;
+  color: #ccc;
+  position: absolute;
+  left: -30px;
+  top: 5px;
+}
+
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.option-box {
+  border: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.option-box.active {
+  border-color: #ff4d4d; /* Warna merah seperti di gambar */
+  position: relative;
+}
+
+/* Centang merah di pojok box aktif */
+.option-box.active::after {
+  content: '✓';
+  position: absolute;
+  top: 0; right: 5px;
+  color: #ff4d4d;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* =================================================== */
+
+/* Menyesuaikan gambar agar responsif di dalam kotak */
+.main-img, .detail-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Menjaga proporsi gambar */
+  display: block;
+}
+
+/* Jika gambar tidak ada */
+.image-placeholder {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed rgba(255,255,255,0.3);
+}
+
+.product-image {
+  overflow: hidden; /* Agar gambar tidak keluar dari rounded corner */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
